@@ -187,15 +187,30 @@ section{padding:76px 0}
 .card-video h3{font-size:16.5px;margin:18px 20px 8px;font-weight:700}
 .card-video p{font-size:14px;color:var(--ts);margin:0 20px 20px;font-weight:600}
 
-/* --- resumo (fecha as funcionalidades, com a mascote) --------------------*/
+/* --- resumo / demonstração (fecha as funcionalidades, com a mascote) -----*/
 .resumo-magisplan{background:linear-gradient(180deg,#fff,#F0F6FF);border-top:1px solid var(--borda);border-bottom:1px solid var(--borda);text-align:center}
-.resumo-magisplan .wrap{max-width:720px}
-.resumo-magisplan img{width:150px;height:auto;margin:0 auto 26px}
+.resumo-magisplan .wrap{max-width:1120px}
+.resumo-magisplan img{width:150px;height:auto;margin:0 auto 18px}
 .texto-resumo{font-size:17px;color:var(--ts);font-weight:600;margin:0 0 22px;line-height:1.6}
+.ver-demonstracao{font-size:clamp(24px,3.2vw,32px);font-weight:800;margin:0 0 36px}
 .citacao{
   font-family:'Poppins',sans-serif;font-size:clamp(19px,2.6vw,25px);font-weight:700;
-  color:var(--azul);margin:0;line-height:1.45;
+  color:var(--azul);margin:40px 0 0;line-height:1.45;
 }
+
+/* telas mockup (sem imagem, texto CSS -- ver comentário em index.html) */
+.grade-telas{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.tela-mock{width:200px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.tela-mock .hero-mock{width:100%;margin:0;border-radius:16px}
+.tela-mock .hero-mock .barra{padding:8px 10px}
+.tela-mock .hero-mock .barra span{width:7px;height:7px}
+.tela-mock .hero-mock .corpo{padding:14px 14px 18px}
+.tela-mock .hero-mock .linha-chip{gap:5px;margin-bottom:10px}
+.tela-mock .hero-mock .chip{font-size:10px;padding:4px 9px}
+.tela-mock .hero-mock .titulo-mock{font-size:12px;margin:0}
+.tela-mock .hero-mock .texto-mock span{height:8px;margin:4px 4px 0 0}
+.tela-legenda{font-size:13px;font-weight:700;color:var(--ts);text-align:center}
+.tela-legenda strong{color:var(--azul)}
 
 /* --- faixa de confiança / dataset --------------------------------------- */
 .faixa-confianca{background:#fff;border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
@@ -228,9 +243,28 @@ section{padding:76px 0}
 .grade-fotos .foto-larga{grid-column:span 2}
 .cta-final .btn-primario:hover{background:#F4F8FF}
 
+/* --- perguntas frequentes (acordeão nativo, sem JS) ---------------------*/
+.lista-perguntas{max-width:760px;margin:0 auto;display:grid;gap:14px}
+.pergunta{
+  background:var(--card);border:1px solid var(--borda);border-radius:16px;
+  padding:4px 22px;box-shadow:var(--sombra);
+}
+.pergunta summary{
+  list-style:none;cursor:pointer;padding:18px 30px 18px 0;position:relative;
+  font-weight:800;font-size:15.5px;color:var(--texto);
+}
+.pergunta summary::-webkit-details-marker{display:none}
+.pergunta summary::after{
+  content:"+";position:absolute;right:0;top:16px;font-size:22px;font-weight:700;
+  color:var(--azul);line-height:1;transition:transform .2s;
+}
+.pergunta[open] summary::after{content:"–"}
+.pergunta summary:hover{color:var(--azul)}
+.pergunta p{margin:0 0 20px;font-size:14.5px;color:var(--ts);line-height:1.7;font-weight:600}
+
 /* --- rodapé --------------------------------------------------------------*/
 footer{background:#fff;border-top:1px solid var(--borda);padding:56px 0 28px;margin-top:40px}
-.rodape-grade{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:32px;margin-bottom:40px}
+.rodape-grade{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px}
 .rodape-marca p{color:var(--ts);font-size:14px;font-weight:600;margin:14px 0 0;max-width:280px}
 .rodape-col h4{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--ts);margin:0 0 16px;font-weight:800}
 .rodape-col ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
@@ -262,3 +296,18 @@ footer{background:#fff;border-top:1px solid var(--borda);padding:56px 0 28px;mar
   .cta-final{padding:48px 24px}
   .rodape-grade{grid-template-columns:1fr 1fr}
 }
+
+/* --- páginas legais (Termos de Uso / Política de Privacidade) -----------*/
+.topo-legal{background:#fff;border-bottom:1px solid var(--borda);padding:18px 0}
+.topo-legal .wrap{display:flex;align-items:center;justify-content:space-between}
+.topo-legal .marca-selo{width:40px;height:40px}
+.topo-legal .brand-word{height:26px}
+.voltar-link{font-weight:800;font-size:14px;color:var(--azul);text-decoration:none}
+.pagina-legal{max-width:760px;margin:0 auto;padding:56px 24px 80px}
+.pagina-legal h1{font-size:clamp(26px,4vw,36px);margin:0 0 6px;font-weight:800}
+.pagina-legal .atualizado{color:var(--ts);font-size:14px;font-weight:700;margin:0 0 40px}
+.pagina-legal h2{font-size:19px;margin:36px 0 14px;font-weight:800;color:var(--azul)}
+.pagina-legal p{font-size:15.5px;line-height:1.75;color:var(--texto);margin:0 0 14px}
+.pagina-legal ul{margin:0 0 14px;padding-left:22px}
+.pagina-legal li{font-size:15.5px;line-height:1.75;color:var(--texto);margin-bottom:6px}
+.pagina-legal strong{font-weight:800}
