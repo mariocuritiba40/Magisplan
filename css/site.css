@@ -311,3 +311,17 @@ footer{background:#fff;border-top:1px solid var(--borda);padding:56px 0 28px;mar
 .pagina-legal ul{margin:0 0 14px;padding-left:22px}
 .pagina-legal li{font-size:15.5px;line-height:1.75;color:var(--texto);margin-bottom:6px}
 .pagina-legal strong{font-weight:800}
+.pagina-legal .alinea{padding-left:22px}
+.pagina-legal .tabela-legal{overflow-x:auto;margin:0 0 18px;border:1px solid var(--borda);border-radius:12px;background:var(--card)}
+.pagina-legal table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px;line-height:1.5;color:var(--texto)}
+.pagina-legal th,.pagina-legal td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--borda)}
+.pagina-legal th{background:#EEF3FB;font-weight:800;color:var(--azul)}
+.pagina-legal tbody tr:last-child td{border-bottom:0}
+@media (max-width:640px){
+  .pagina-legal .tabela-legal{border:0;background:none;overflow:visible}
+  .pagina-legal table{min-width:0}
+  .pagina-legal thead{display:none}
+  .pagina-legal tr{display:block;background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:6px 0;margin-bottom:10px}
+  .pagina-legal td{display:block;border:0;padding:6px 14px}
+  .pagina-legal td::before{content:attr(data-rotulo);display:block;font-size:12px;font-weight:800;color:var(--azul);text-transform:uppercase;letter-spacing:.03em}
+}
